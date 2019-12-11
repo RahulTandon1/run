@@ -4,7 +4,6 @@ import time
 
 # declaring constants
 runGroundY = 300
-
 obX = 1000
 obY = 250
 obWidth = 20
@@ -13,17 +12,31 @@ obHeight= 10
 playerRadius = 15
 playerX =  75
 playerY = runGroundY - playerRadius -1
-playerVelocity = -5
+playerVelocity = -10
 playerGravity = 0.2
+
+touchZone = 15
 
 # function definitions
 
+def touches(player, obstacle):
+    global playerX, playerY, touchZone
+    currentPlayerY = player.getP2().getY()
+    currentPlayerX = player.getP2().getX()
+    if currentPlayerY + touchZone >= playerY:
+        player.undraw()
+        player = Circle(Point(currentPlayerX, playerY), playerRadius)
+        player.draw(win)
+
 # makes the user jump
-def jump(player):
+def jump(player, obstacle):
+    global playerVelocity, playerGravity
     print('here')
     player.move(0, playerVelocity)
+
     # adding +ve to -ve to make it move downward
-    playerVelocity += playerGravity    
+    playerVelocity += playerGravity
+    touches(player, obstacle)
 
 
 def main():
@@ -48,7 +61,7 @@ def main():
     
     while True:
         if win.checkKey() == 'space':
-            jump(player)
+            jump(player, obstacle)
     # waits for to execute until mouse is clicked in windows    
     win.getMouse()
     # closes windows / games
