@@ -1,7 +1,7 @@
 # run
 
 ## Using / Playing
-download the file and run sgrt.py
+download the file and run ```sgrt.py```
 
 ## backstory
 A friend of mine called Shubhang (not on github) needed help with his CS Project. 
