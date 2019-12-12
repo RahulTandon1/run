@@ -4,10 +4,10 @@ aka 'the Slow Down Running Game'
 download the file and run ```sgrt.py```
 
 ## backstory
-A friend of mine called Shubhang (not on github) needed help with his CS Project. 
+A friend of mine named Shubhang (not on github) needed help with his CS Project. 
 The aim was to make a python clone of dino run. 
 
-We used the graphics.py module by John Zelle (https://mcsp.wartburg.edu/zelle/python/graphics.py)
+We used the graphics.py module by John Zelle (https://mcsp.wartburg.edu/zelle/python/graphics.py | docs at https://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf)
 
 We made a circle the dino and the bullet the trees. Press 'space' to jump. Simple. 
 
